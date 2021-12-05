@@ -22,7 +22,7 @@ class TransactionEmail extends Request {
      * @param sendAt
      */
 
-    create(toName, toEmail, fromName, fromEmail, replyToName, replyToEmail, subject, body, plainText, sendAt) {
+    create({toName, toEmail, fromName, fromEmail, replyToName, replyToEmail, subject, body, plainText, sendAt) {
         if (!toName || !toEmail || !fromName || !subject || !body || !sendAt) {
             return Promise.reject('ParamInvalid');
         }
